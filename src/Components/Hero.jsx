@@ -17,8 +17,6 @@ const Hero = () => {
     }
   };
 
-  
-
   const processCommand = (command) => {
     let outputContent = "";
     switch (command.toLowerCase()) {
@@ -72,6 +70,18 @@ const Hero = () => {
         );
         break;
 
+      case "ls":
+        outputContent = (
+          <ul>
+            <li><span className="text-green-400">about</span><span className="text-white">: Displays the about section</span></li>
+            <li><span className="text-green-400">education</span><span className="text-white">: Displays the education section</span></li>
+            <li><span className="text-green-400">skills</span><span className="text-white">: Displays the skills section</span></li>
+            <li><span className="text-green-400">projects</span><span className="text-white">: Displays the projects section</span></li>
+            <li><span className="text-green-400">contact</span><span className="text-white">: Displays the contact section</span></li>
+          </ul>
+        );
+        break;
+
       default:
         outputContent = `Command not found: ${command}`;
     }
@@ -84,25 +94,30 @@ const Hero = () => {
 
       <div className="border border-gray-600 rounded-lg bg-gray-900 p-4 mt-4">
         {/* Terminal Input */}
-        <form
-          onSubmit={handleCommandSubmit}
-          className=" border-gray-600 pt-2 flex items-center"
-        >
-          <span className="text-theme font-mono">
-            Shreyas@detail ~ <span className="text-blue-400">$</span>
-          </span>
-          <input
-            type="text"
-            value={currentCommand}
-            onChange={handleInputChange}
-            className="bg-transparent text-white outline-none flex-grow pl-2 font-mono"
-            placeholder="Type a command..."
-          />
-        </form>
+        <div className="flex flex-col sm:flex-row items-center">
+          {/* Shreyas@detail ~ */}
+          <p className="text-theme  sm:mr-2">
+            Shreyas@detail ~
+          </p>
 
+          {/* Terminal input with $ symbol */}
+          <form
+            onSubmit={handleCommandSubmit}
+            className=" flex items-center w-full sm:max-w-md"
+          >
+            <span className="text-blue-400">$</span>
+            <input
+              type="text"
+              value={currentCommand}
+              onChange={handleInputChange}
+              className="bg-transparent text-white outline-none flex-grow pl-2 w-full sm:w-auto sm:max-w-md"
+              placeholder="Type a command..."
+            />
+          </form>
+        </div>
 
         {/* Terminal Output */}
-        <div className={`terminal-content flex-grow overflow-y-auto font-mono text-green-400 ${output ? "fade-in" : ""}`}>
+        <div className={`terminal-content flex-grow overflow-y-auto  text-green-400 ${output ? "fade-in" : ""}`}>
           {output && (
             <div className="mb-2">
               <div className="text-green-400">{output}</div>
@@ -110,27 +125,11 @@ const Hero = () => {
           )}
         </div>
 
-
-
-
         {/* List of Commands */}
         <div className="command-list bg-gray-800 p-4 mt-4 text-white">
-          <h2 className="font-bold text-xl">Available Commands:</h2>
           <ul className="list-disc pl-5">
             <li>
-              <span className="text-green-400">about</span>: Displays the about section code.
-            </li>
-            <li>
-              <span className="text-green-400">education</span>: Displays the education section code.
-            </li>
-            <li>
-              <span className="text-green-400">skills</span>: Displays the skills section code.
-            </li>
-            <li>
-              <span className="text-green-400">projects</span>: Displays the projects section code.
-            </li>
-            <li>
-              <span className="text-green-400">contact</span>: Displays the contact section code.
+              <span className="text-green-400">ls</span>: Lists all available commands.
             </li>
           </ul>
         </div>
