@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 
-const words = ["Web Developer", "Web Designer", "Coder"];
+const words = ["Web Developer", "Web Designer", "Coder", "MERN Stack Developer"];
 
 const Nav = () => {
     const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -43,7 +43,7 @@ const Nav = () => {
             className="flex items-center justify-center flex-col"
             onClick={() => window.scrollTo(0, 0)}
         >
-            <h1 className="text-white text-[36px] font-bold">Shreyas Patil</h1>
+            <h1 className="text-white text-[36px] font-bold">Welcome to Shreyas Portfolio</h1>
 
             <p className="text-white text-[25px] font-semibold">
                 {currentText}
