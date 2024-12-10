@@ -238,7 +238,7 @@ const Hero = () => {
     <div className="bg-black text-white h-screen flex flex-col">
       <Nav />
 
-      <div className="snake-border rounded-lg bg-gray-900 p-4 mt-4">
+      <div className="snake-border rounded-lg bg-gray-900 p-4 mt-4 sm:px-1 md:px-4">
         {/* Terminal Input */}
         <div className="flex flex-col sm:flex-row items-center">
           {/* Shreyas@detail ~ */}
