@@ -53,7 +53,7 @@ const Hero = () => {
           );
           break;
 
-        case "education":
+        case "edu":
           outputContent = (
             <div>
               <h1>Bachelor of Technology in Computer Science</h1>
@@ -67,8 +67,8 @@ const Hero = () => {
         case "skills":
           outputContent = (
             <div>
-              <div className="border border-bold rounded-lg bg-gray-900 p-4 mt-4">
-                <div className="underline underline-offset-4 text-yellow-400">Technical Skills</div>
+              <details className="border border-bold rounded-lg bg-gray-900 p-4 mt-4">
+                <summary className="underline underline-offset-4 text-yellow-400">Technical Skills</summary>
                 <ul >
                   <li>Programming Languages: <span className="text-white">JavaScript, HTML, CSS, C++</span></li>
                   <li>Frameworks & Libraries: <span className="text-white">React.js, Node.js, Express.js, Next.js, Material UI</span></li>
@@ -76,16 +76,16 @@ const Hero = () => {
                   <li>Cloud & Deployment: <span className="text-white">AWS, Docker, Kubernetes, Vercel</span></li>
                   <li>Version Control & Dev Tools: <span className="text-white">Git, GitHub, NPM</span></li>
                 </ul>
-              </div>
+              </details>
 
-              <div className="border border-bold rounded-lg bg-gray-900 p-4 mt-4">
-                <div className="underline underline-offset-4 text-yellow-400">Soft Skills</div>
+              <details className="border border-bold rounded-lg bg-gray-900 p-4 mt-4">
+                <summary className="underline underline-offset-4 text-yellow-400">Soft Skills</summary>
                 <ul>
                   <li>Strong problem-solving abilities</li>
                   <li>Time management and project planning</li>
                   <li>Ability to work in fast-paced, team-oriented environments</li>
                 </ul>
-              </div>
+              </details>
             </div>
           );
           break;
@@ -95,8 +95,8 @@ const Hero = () => {
             <div>
               <div className="project">
 
-                <div className="project-1 border border-bold rounded-lg bg-gray-900 p-4 mt-4">
-                  <h1 className="underline underline-offset-4 text-yellow-400">NPM Package (hooks-library-react)</h1>
+                <details className="project-1 border border-bold rounded-lg bg-gray-900 p-4 mt-4">
+                  <summary className="underline underline-offset-4 text-yellow-400">NPM Package (hooks-library-react)</summary>
                   <i >A collection of custom React hooks to streamline common functionality such as data fetching, debouncing, local storage management, and more.</i>
                   <p>Description: <span className="text-white">Developed an npm package hooks-library-react that includes reusable custom React hooks for various common tasks. The library is designed to simplify development by providing easy-to-use hooks that can be integrated into any React application.</span></p>
                   <span>Key Features</span>
@@ -107,14 +107,16 @@ const Hero = () => {
                     <li className="text-white">4. <i>usePrevious</i>: A hook to keep track of previous values for comparison.</li>
                   </ul>
                   <a href="https://www.npmjs.com/package/hooks-library-react" target="_blank"><span className="underline underline-offset-4">Website Link</span> <span className="text-white"> npmjs.com/package/hooks-library-react</span></a>
-                </div>
+                </details>
 
 
 
-                <div className="project-2 border border-bold rounded-lg bg-gray-900 p-4 mt-4">
-                  <h1 className="underline underline-offset-4 text-yellow-400">E-commerce Website: StyleSavvy</h1>
-                  <i >A complete e-commerce platform featuring both a customer-facing client side and a powerful admin panel for product management and analytics.</i>
-                  <p>Description: <span className="text-white"> Designed and developed an e-commerce platform with two distinct sides</span>
+                <details className="project-2 border border-bold rounded-lg bg-gray-900 p-4 mt-4">
+                  <summary className="underline underline-offset-4 text-yellow-400">
+                    E-commerce Website: StyleSavvy
+                  </summary>
+                  <i>A complete e-commerce platform featuring both a customer-facing client side and a powerful admin panel for product management and analytics.</i>
+                  <p>Description: <span className="text-white">Designed and developed an e-commerce platform with two distinct sides</span>
                     <ul className="text-white">
                       <li>Client Side: Provides users with a smooth and interactive shopping experience, allowing them to browse products, add items to their cart, and complete secure purchases.</li>
                       <li>Admin Side: Allows admins to manage product listings, and track orders</li>
@@ -141,14 +143,21 @@ const Hero = () => {
                   </div>
                   <div>
                     <h1>Website Links</h1>
-                    <a href="https://stylsavvy.vercel.app/" target="_blank"><span className="underline underline-offset-4">Client Side</span> <span className="text-white"> stylsavvy.vercel.app/</span></a><br />
-                    <a href="https://stylesavvyadmin.vercel.app/" target="_blank"><span className="underline underline-offset-4">Admin Side</span> <span className="text-white"> stylesavvyadmin.vercel.app/</span></a>
+                    <a href="https://stylsavvy.vercel.app/" target="_blank">
+                      <span className="underline underline-offset-4">Client Side</span>
+                      <span className="text-white"> stylsavvy.vercel.app/</span>
+                    </a><br />
+                    <a href="https://stylesavvyadmin.vercel.app/" target="_blank">
+                      <span className="underline underline-offset-4">Admin Side</span>
+                      <span className="text-white"> stylesavvyadmin.vercel.app/</span>
+                    </a>
                   </div>
-                </div>
+                </details>
 
 
-                <div className="project-3 border border-bold rounded-lg bg-gray-900 p-4 mt-4">
-                  <h1 className="underline underline-offset-4 text-yellow-400">Fitness Website: WorkOutHub</h1>
+
+                <details className="project-3 border border-bold rounded-lg bg-gray-900 p-4 mt-4">
+                  <summary className="underline underline-offset-4 text-yellow-400">Fitness Website: WorkOutHub</summary>
                   <i >An AI-powered fitness platform that provides workout routines, instructional GIFs, and health tracking tools</i>
                   <p>Description: <span className="text-white"> Developed a web-based fitness platform offering 1,000+ exercise GIFs, BMI calculators, and personalized workout recommendations. Integrated AI to suggest similar exercises and YouTube fitness content.</span></p>
                   <span>Key Features</span>
@@ -157,9 +166,35 @@ const Hero = () => {
                     <li className="text-white">2. Real-time BMI calculation with AI-powered insights</li>
                   </ul>
                   <a href="https://workouthub.vercel.app/" target="_blank"><span className="underline underline-offset-4">Website Link</span> <span className="text-white"> workouthub.vercel.app/</span></a>
-                </div>
+                </details>
 
               </div>
+            </div>
+          );
+          break;
+
+        case "achivements":
+          outputContent = (
+            <div>
+              <details className="border border-bold rounded-lg bg-gray-900 p-4 mt-4">
+                <summary className="underline underline-offset-4 text-yellow-400">Certifications</summary>
+                <i >Explore the certifications that validate my skills and dedication to learning.</i>
+                <ul>
+                  <li>1. Frontend Developer (React) Certificate - HackerRank</li>
+                  <li>2. AWS Academy Graduate - AWS Academy Cloud Architecting</li>
+                  <li>3. AWS Academy Graduate - AWS Academy Machine Learning Foundations</li>
+                  <li>4. AWS Academy Graduate - AWS Academy Cloud Foundations</li>
+                </ul>
+              </details>
+
+              <details className="border border-bold rounded-lg bg-gray-900 p-4 mt-4">
+                <summary className="underline underline-offset-4 text-yellow-400">Achievements</summary>
+                <i >Discover the milestones I&apos;ve reached in my career and personal development.</i>
+                <ul>
+                  <li>1. Created a open-source npm package</li>
+                  <li>2. Awarded scholarship by college for exceptional MHTCET score</li>
+                </ul>
+              </details>
             </div>
           );
           break;
@@ -184,7 +219,7 @@ const Hero = () => {
                 <span className="text-white">: Learn about my journey and passion for web development</span>
               </li>
               <li>
-                <span className="text-green-400">education</span>
+                <span className="text-green-400">edu</span>
                 <span className="text-white">: Explore my academic background and expertise</span>
               </li>
               <li>
@@ -194,6 +229,10 @@ const Hero = () => {
               <li>
                 <span className="text-green-400">projects</span>
                 <span className="text-white">: Check out the impactful projects I&apos;ve built.</span>
+              </li>
+              <li>
+                <span className="text-green-400">achivements</span>
+                <span className="text-white">: Milestones and recognitions from my journey</span>
               </li>
               <li>
                 <span className="text-green-400">contact</span>
@@ -207,8 +246,9 @@ const Hero = () => {
           isValidCommand = false; // Mark as invalid
           outputContent = (
             <div >
-              <p className="text-red-400">Package not found: <span className="text-white">{command}</span></p>
-              <p>To know available commands type <span className="text-white">ls</span> command</p>
+              {/* <p className="text-red-400">Package not found: <span className="text-white">{command}</span></p>
+              <p>To know available commands type <span className="text-white">ls</span> command</p> */}
+              <p className="text-red-400">Command not recognized. Try <span className="text-white">ls</span> to list all valid commands.</p>
             </div>
           );
           break;
