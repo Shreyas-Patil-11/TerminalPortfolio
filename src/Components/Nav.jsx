@@ -37,6 +37,7 @@ const Nav = () => {
         return () => clearTimeout(timeout);
     }, [currentText, isTyping, currentWordIndex]);
 
+
     return (
         <Link
             to="/"
@@ -44,6 +45,8 @@ const Nav = () => {
             onClick={() => window.scrollTo(0, 0)}
         >
             <h1 className="text-white text-[36px] font-bold">Welcome to Shreyas Portfolio</h1>
+            
+            <h3 className="text-yellow-400 text-[28px] font-semibold">Developer Where Code Meets Command</h3>
 
             <p className="text-white text-[25px] font-semibold">
                 {currentText}
