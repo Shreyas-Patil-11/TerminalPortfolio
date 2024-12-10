@@ -249,7 +249,9 @@ const Hero = () => {
             onSubmit={handleCommandSubmit}
             className="flex items-center w-full sm:max-w-md"
           >
-            <span className="text-blue-400">$ npm install </span>
+            <span className="text-blue-400">$</span>
+            <span className="text-blue-400 mx-1">npm </span>
+            <span className="text-blue-400">install </span>
             <input
               type="text"
               value={currentCommand}
