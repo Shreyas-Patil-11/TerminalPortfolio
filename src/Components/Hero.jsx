@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Nav from "./Nav";
+import { IoRocket } from "react-icons/io5";
 
 
 const Hero = () => {
@@ -168,6 +169,12 @@ const Hero = () => {
                   <a href="https://workouthub.vercel.app/" target="_blank"><span className="underline underline-offset-4">Website Link</span> <span className="text-white"> workouthub.vercel.app/</span></a>
                 </details>
 
+
+                <div className=" border border-bold rounded-lg bg-gray-900 p-4 mt-4 cursor-pointer" >
+                   <a href="https://shreyas-dev-showcase.vercel.app/" target="_blank" className="flex align-middle justify-center">
+                        Know more about my Projects <IoRocket className="mt-1 ml-3" />
+                   </a>
+                </div>
               </div>
             </div>
           );
